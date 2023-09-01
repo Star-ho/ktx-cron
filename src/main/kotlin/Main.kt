@@ -63,7 +63,7 @@ suspend fun sendAlarm(ticket: KTXTicket, ktxHttpRequest: KtxHttpRequest) {
 
     remainTrainInfoList.forEach {
         val request = SendMessage(KTX_CLIENT_CHAT_ID, "${ticket.targetName} ${it.startTime}")
-        val res = telegramBot.execute(request)
+        telegramBot.execute(request)
     }
 }
 
