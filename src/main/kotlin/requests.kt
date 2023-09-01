@@ -2,12 +2,10 @@ import io.ktor.client.*
 import io.ktor.client.call.*
 import io.ktor.client.engine.cio.*
 import io.ktor.client.request.*
-import io.ktor.util.*
 
 
 class KtxHttpRequest {
-    @OptIn(InternalAPI::class)
-    suspend fun sendRequest(ktxUrl: String, aa: String): String {
+    suspend fun sendRequest(ktxUrl: String, body: String): String {
         return HttpClient(CIO).post(ktxUrl) {
             headers {
                 set(
@@ -16,7 +14,7 @@ class KtxHttpRequest {
                 )
                 set("Content-Type", "application/x-www-form-urlencoded")
             }
-            setBody(aa)
+            setBody(body)
         }.body()
     }
 }
