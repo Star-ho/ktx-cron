@@ -10,6 +10,9 @@ repositories {
     mavenCentral()
 }
 
+val jar: Jar by tasks
+jar.enabled = true
+
 dependencies {
     implementation("org.jsoup:jsoup:1.15.3")
     implementation("com.github.pengrad:java-telegram-bot-api:6.8.0")

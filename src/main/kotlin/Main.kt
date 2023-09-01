@@ -81,8 +81,8 @@ fun getRemainTrainInfoList(html: String, ktxTicket: KTXTicket): List<TrainInfo> 
             isSoldOut(it.child(5))
         )
     }.filter {
-        it.startTime in ktxTicket.startTime..ktxTicket.endTime /*&& !it.isNormalSoldOut*/
-                && (!ktxTicket.isOnlyKtx || it.isKtx == ktxTicket.isOnlyKtx)
+        it.startTime in ktxTicket.startTime..ktxTicket.endTime && !it.isNormalSoldOut
+                && (!ktxTicket.isOnlyKtx || it.isKtx)
     }
 }
 
