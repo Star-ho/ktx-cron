@@ -4,8 +4,8 @@ import io.ktor.client.engine.cio.*
 import io.ktor.client.request.*
 
 
-class KtxHttpRequest {
-    suspend fun sendRequest(ktxUrl: String, body: String): String {
+class KtxHttpRequest :CustomHttpRequest{
+    override suspend fun sendRequest(ktxUrl: String, body: String): String {
         return HttpClient(CIO).post(ktxUrl) {
             headers {
                 set(
@@ -17,4 +17,8 @@ class KtxHttpRequest {
             setBody(body)
         }.body()
     }
+}
+
+interface CustomHttpRequest{
+    suspend fun sendRequest(ktxUrl: String, body: String): String
 }

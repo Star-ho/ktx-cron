@@ -57,7 +57,7 @@ fun main() {
     }
 }
 
-suspend fun sendAlarm(ticket: KTXTicket, ktxHttpRequest: KtxHttpRequest) {
+suspend fun sendAlarm(ticket: KTXTicket, ktxHttpRequest: CustomHttpRequest) {
     val html = ktxHttpRequest.sendRequest(KTX_URL, ticket.url)
     val remainTrainInfoList = getRemainTrainInfoList(html, ticket)
 
