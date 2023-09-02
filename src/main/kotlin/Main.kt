@@ -38,7 +38,6 @@ val telegramBot = TelegramBot(TELEGRAM_BOT_TOKEN)
 fun main() {
     val ktxHttpRequest = KtxHttpRequest()
     val startRequest = SendMessage(ADMIN_CHAT_ID, "서버 시작")
-    val serverHealthRequest = SendMessage(ADMIN_CHAT_ID, "서버 정상")
     telegramBot.execute(startRequest)
     var count = 0
     while (true) {
@@ -48,9 +47,9 @@ fun main() {
             sendAlarm(KTXTicket.SEOUL_TO_EAST_DAEGU_SECOND, ktxHttpRequest)
             sendAlarm(KTXTicket.SEOUL_TO_EAST_DAEGU_THIRD, ktxHttpRequest)
         }
-        Thread.sleep(1000)
         count++
         if (count > 3600) {
+            val serverHealthRequest = SendMessage(ADMIN_CHAT_ID, "서버 정상")
             telegramBot.execute(serverHealthRequest)
             count = 0
         }
