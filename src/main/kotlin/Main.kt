@@ -36,7 +36,7 @@ enum class KTXTicket(
 
 val telegramBot = TelegramBot(TELEGRAM_BOT_TOKEN)
 fun main() {
-    val ktxHttpRequest = OldHttpRequest()
+    val ktxHttpRequest = KtxHttpRequest()
     val startRequest = SendMessage(ADMIN_CHAT_ID, "서버 시작")
     telegramBot.execute(startRequest)
     var count = 0
