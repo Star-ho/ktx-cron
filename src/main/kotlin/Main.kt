@@ -3,7 +3,6 @@ import com.fasterxml.jackson.module.kotlin.jsonMapper
 import com.fasterxml.jackson.module.kotlin.kotlinModule
 import com.pengrad.telegrambot.TelegramBot
 import com.pengrad.telegrambot.request.SendMessage
-import kotlinx.coroutines.runBlocking
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
 
@@ -17,7 +16,9 @@ const val KTX_URL = "https://www.letskorail.com/ebizprd/EbizPrdTicketPr21111_i1.
 const val CHUNG_RYANG_RI_TO_ANDONG_URL =
     "txtGoStartCode=0090&txtGoEndCode=0526&radJobId=1&selGoTrain=05&txtSeatAttCd_4=015&txtSeatAttCd_3=000&txtSeatAttCd_2=000&txtPsgFlg_2=0&txtPsgFlg_3=0&txtPsgFlg_4=0&txtPsgFlg_5=0&chkCpn=N&selGoSeat1=015&selGoSeat2=&txtPsgCnt1=1&txtPsgCnt2=0&txtGoPage=1&txtGoAbrdDt=20230928&selGoRoom=&useSeatFlg=&useServiceFlg=&checkStnNm=Y&txtMenuId=11&SeandYo=&txtGoStartCode2=&txtGoEndCode2=&hidEasyTalk=&txtGoStart=%EC%B2%AD%EB%9F%89%EB%A6%AC&txtGoEnd=%EC%95%88%EB%8F%99&start=2023.9.28&selGoHour=00&txtGoHour=000000&selGoYear=2023&selGoMonth=09&selGoDay=28&txtGoYoil=%EB%AA%A9&txtPsgFlg_1=1"
 
-const val SINLIM_ATHLETIC_CENTER_LECTURE_URL = "https://www.gwanakgongdan.or.kr/rest/lecture/list?company_code=KWAN_AK02&search_type=R&category_cd=1000010000&category_level=2&page=1&page_size=100"
+const val SINLIM_ATHLETIC_CENTER_LECTURE_URL =
+    "https://www.gwanakgongdan.or.kr/rest/lecture/list?company_code=KWAN_AK02&search_type=R&category_cd=1000010000&category_level=2&page=1&page_size=100"
+
 enum class KTXTicket(
     val targetName: String,
     val startTime: Int,
@@ -37,10 +38,9 @@ fun main() {
     telegramBot.execute(startRequest)
     var count = 0
     while (true) {
-        runBlocking {
-            sendKtxAlarm(KTXTicket.CHUNG_RYANG_RI_TO_ANDONG, ktxHttpRequest)
-            sendSwimAlarm(objectMapper)
-        }
+        sendKtxAlarm(KTXTicket.CHUNG_RYANG_RI_TO_ANDONG, ktxHttpRequest)
+        sendSwimAlarm(objectMapper)
+
         count++
         if (count > 3600) {
             val serverHealthRequest = SendMessage(ADMIN_CHAT_ID, "서버 정상")
@@ -50,8 +50,8 @@ fun main() {
     }
 }
 
-fun sendSwimAlarm(objectMapper:ObjectMapper) {
-    val response = SinlimSwimHttpRequest().sendRequest(SINLIM_ATHLETIC_CENTER_LECTURE_URL,objectMapper)
+fun sendSwimAlarm(objectMapper: ObjectMapper) {
+    val response = SinlimSwimHttpRequest().sendRequest(SINLIM_ATHLETIC_CENTER_LECTURE_URL, objectMapper)
     val remainLectureList = response
         .filter { it.capa.toInt() - it.reg_person.toInt() > 0 }
         .filter { (it.class_cd == "00038" || it.class_cd == "00046") }
@@ -61,6 +61,7 @@ fun sendSwimAlarm(objectMapper:ObjectMapper) {
         telegramBot.execute(request)
     }
 }
+
 fun sendKtxAlarm(ticket: KTXTicket, ktxHttpRequest: CustomHttpRequest) {
     val html = ktxHttpRequest.sendRequest(KTX_URL, ticket.url)
     val remainTrainInfoList = getRemainTrainInfoList(html, ticket)
