@@ -40,7 +40,7 @@ fun main() {
     while (true) {
         println("sendKtx")
         sendKtxAlarm(KTXTicket.CHUNG_RYANG_RI_TO_ANDONG, ktxHttpRequest)
-        println("swim")
+        println("sendSwim")
         sendSwimAlarm(objectMapper)
 
         count++

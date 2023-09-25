@@ -16,6 +16,7 @@ class SinlimSwimHttpRequest {
             .setHeader("Accept-Encoding","gzip, deflate, br")
             .build()
         val bodyString = client.send(request, HttpResponse.BodyHandlers.ofString()).body()
+        println(bodyString)
 
         return objectMapper.readValue(bodyString, Array<SinlimSwimResponse>::class.java)
     }
