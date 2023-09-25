@@ -38,7 +38,9 @@ fun main() {
     telegramBot.execute(startRequest)
     var count = 0
     while (true) {
+        println("sendKtx")
         sendKtxAlarm(KTXTicket.CHUNG_RYANG_RI_TO_ANDONG, ktxHttpRequest)
+        println("swim")
         sendSwimAlarm(objectMapper)
 
         count++
