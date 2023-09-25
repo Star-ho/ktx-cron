@@ -11,6 +11,9 @@ class SinlimSwimHttpRequest {
         val request: HttpRequest = HttpRequest.newBuilder()
             .uri(URI.create(url))
             .GET()
+            .setHeader("Accept","text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7")
+            .setHeader("Content-Type","application/x-www-form-urlencoded")
+            .setHeader("Accept-Encoding","gzip, deflate, br")
             .build()
         val bodyString = client.send(request, HttpResponse.BodyHandlers.ofString()).body()
 
