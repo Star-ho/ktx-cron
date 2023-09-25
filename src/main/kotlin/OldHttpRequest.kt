@@ -4,7 +4,7 @@ import java.net.http.HttpRequest
 import java.net.http.HttpResponse
 
 class OldHttpRequest:CustomHttpRequest{
-    override suspend fun sendRequest(ktxUrl: String, body: String): String {
+    override fun sendRequest(ktxUrl: String, body: String): String {
         val client: HttpClient = HttpClient.newHttpClient()
 
         val request: HttpRequest = HttpRequest.newBuilder()

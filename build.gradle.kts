@@ -25,7 +25,11 @@ tasks.jar {
 dependencies {
     implementation("org.jsoup:jsoup:1.15.3")
     implementation("com.github.pengrad:java-telegram-bot-api:6.8.0")
+
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    implementation("com.fasterxml.jackson.core:jackson-core:2.15.2")
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.15.2")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.15.2")
 
     val ktorVersion = "2.1.3"
     // CIO request
