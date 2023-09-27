@@ -42,7 +42,8 @@ fun main() {
         sendSwimAlarm(objectMapper)
 
         count++
-        if (count > 3600) {
+        val loop = 3600*12
+        if (count > loop) {
             val serverHealthRequest = SendMessage(ADMIN_CHAT_ID, "서버 정상")
             telegramBot.execute(serverHealthRequest)
             count = 0
