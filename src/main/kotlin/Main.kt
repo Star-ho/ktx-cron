@@ -31,34 +31,35 @@ enum class KTXTicket(
 
 val telegramBot = TelegramBot(TELEGRAM_BOT_TOKEN)
 fun main() {
-    val ktxHttpRequest = OldHttpRequest()
+
     val startRequest = SendMessage(ADMIN_CHAT_ID, "서버 시작 v8")
     val objectMapper = jsonMapper()
         .registerModules(kotlinModule())
     telegramBot.execute(startRequest)
     var count = 0
     while (true) {
-//        sendKtxAlarm(KTXTicket.CHUNG_RYANG_RI_TO_ANDONG, ktxHttpRequest)
         sendSwimAlarm(objectMapper)
 
         count++
-        if (count > 3600) {
+        val loop = 3600*12
+        if (count > loop) {
             val serverHealthRequest = SendMessage(ADMIN_CHAT_ID, "서버 정상")
             telegramBot.execute(serverHealthRequest)
             count = 0
         }
+        Thread.sleep(1000)
     }
 }
 
 fun sendSwimAlarm(objectMapper: ObjectMapper) {
     val response = SinlimSwimHttpRequest().sendRequest(SINLIM_ATHLETIC_CENTER_LECTURE_URL, objectMapper)
     val remainLectureList = response
-        .filter { it.capa.toInt() - it.reg_person.toInt() > 0 }
         .filter { (it.class_cd == "00038" || it.class_cd == "00046") }
+//        .filter { it.capa.toInt() - it.reg_person.toInt() > 0 }
 
     remainLectureList.forEach {
         val request = SendMessage(MEGABOX_CLIENT_CHAT_ID, "${it.comnm} ${it.train_day_nm}  ${it.train_stime}")
-        telegramBot.execute(request)
+//        telegramBot.execute(request)
     }
 }
 

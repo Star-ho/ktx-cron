@@ -30,7 +30,7 @@ class SinlimSwimParam(
     val page: Int = 1,
     val page_size: Int = 100,
 )
-class SinlimSwimResponse(
+data class SinlimSwimResponse(
     val comcd: String,
     val comnm: String,
     val class_cd: String,
