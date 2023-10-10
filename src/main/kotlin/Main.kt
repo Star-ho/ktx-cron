@@ -13,12 +13,16 @@ const val KTX_CLIENT_CHAT_ID = "-947068919"
 
 const val ADMIN_CHAT_ID = "1052011050"
 const val KTX_URL = "https://www.letskorail.com/ebizprd/EbizPrdTicketPr21111_i1.do"
-const val CHUNG_RYANG_RI_TO_ANDONG_URL =
-    "txtGoStartCode=0090&txtGoEndCode=0526&radJobId=1&selGoTrain=05&txtSeatAttCd_4=015&txtSeatAttCd_3=000&txtSeatAttCd_2=000&txtPsgFlg_2=0&txtPsgFlg_3=0&txtPsgFlg_4=0&txtPsgFlg_5=0&chkCpn=N&selGoSeat1=015&selGoSeat2=&txtPsgCnt1=1&txtPsgCnt2=0&txtGoPage=1&txtGoAbrdDt=20230928&selGoRoom=&useSeatFlg=&useServiceFlg=&checkStnNm=Y&txtMenuId=11&SeandYo=&txtGoStartCode2=&txtGoEndCode2=&hidEasyTalk=&txtGoStart=%EC%B2%AD%EB%9F%89%EB%A6%AC&txtGoEnd=%EC%95%88%EB%8F%99&start=2023.9.28&selGoHour=00&txtGoHour=000000&selGoYear=2023&selGoMonth=09&selGoDay=28&txtGoYoil=%EB%AA%A9&txtPsgFlg_1=1"
+//const val CHUNG_RYANG_RI_TO_ANDONG_URL =
+//    "txtGoStartCode=0090&txtGoEndCode=0526&radJobId=1&selGoTrain=05&txtSeatAttCd_4=015&txtSeatAttCd_3=000&txtSeatAttCd_2=000&txtPsgFlg_2=0&txtPsgFlg_3=0&txtPsgFlg_4=0&txtPsgFlg_5=0&chkCpn=N&selGoSeat1=015&selGoSeat2=&txtPsgCnt1=1&txtPsgCnt2=0&txtGoPage=1&txtGoAbrdDt=20230928&selGoRoom=&useSeatFlg=&useServiceFlg=&checkStnNm=Y&txtMenuId=11&SeandYo=&txtGoStartCode2=&txtGoEndCode2=&hidEasyTalk=&txtGoStart=%EC%B2%AD%EB%9F%89%EB%A6%AC&txtGoEnd=%EC%95%88%EB%8F%99&start=2023.9.28&selGoHour=00&txtGoHour=000000&selGoYear=2023&selGoMonth=09&selGoDay=28&txtGoYoil=%EB%AA%A9&txtPsgFlg_1=1"
+//
+//const val SINLIM_ATHLETIC_CENTER_LECTURE_URL =
+//    "https://www.gwanakgongdan.or.kr/rest/lecture/list?company_code=KWAN_AK02&search_type=R&category_cd=1000010000&category_level=2&page=1&page_size=100"
 
-const val SINLIM_ATHLETIC_CENTER_LECTURE_URL =
-    "https://www.gwanakgongdan.or.kr/rest/lecture/list?company_code=KWAN_AK02&search_type=R&category_cd=1000010000&category_level=2&page=1&page_size=100"
-
+const val YONGSAN_TO_SUNCHEN_URL =
+    "hidNormalRsv=&hidBiztransferRsv=&srTOrder=&hidDiscount=&selGoTrain=05&txtPsgFlg_1=2&txtPsgFlg_2=0&txtPsgFlg_8=0&txtPsgFlg_3=0&txtPsgFlg_4=0&txtPsgFlg_5=0&txtSeatAttCd_3=000&txtSeatAttCd_2=000&txtSeatAttCd_4=015&selGoTrainRa=05&radJobId=1&txtGoStart=%EC%9A%A9%EC%82%B0&txtGoEnd=%EC%88%9C%EC%B2%9C&txtGoStartCode=&txtGoEndCode=&selGoYear=2023&selGoMonth=10&selGoDay=21&selGoHour=07&txtGoHour=070000&txtGoYoil=%ED%86%A0&ret_url=&selGoSeat1=015&selGoSeat2=&txtPsgCnt1=2&txtPsgCnt2=0&txtGoPage=1&txtGoAbrdDt=20231021&selGoRoom=&useSeatFlg=&useServiceFlg=&checkStnNm=Y&SeandYo=N&txtGoStartCode2=&txtGoEndCode2=&txtPnrNo=&hidStlFlg=&chkTrnSeq=&chkChgTrn1=&chkChgTrn2=&chkBtnImgTrn1=&chkBtnImgTrn2=&chkInitFlg=Y&txtMenuId=11&ra=1&txtSeatAttCd1=&txtSeatAttCd2=&txtSeatAttCd3=&txtSeatAttCd4=&txtSeatAttCd4_1=&txtSeatAttCd5=&strChkCpn=N&txtTotPsgCnt=&txtSrcarCnt=0&txtSrcarCnt1=0&txtSrcarNo1=&txtSrcarNo2=&txtSrcarNo3=&txtSrcarNo4=&txtSrcarNo5=&txtSrcarNo6=&txtSrcarNo7=&txtSrcarNo8=&txtSrcarNo9=&txtSeatNo1=&txtSeatNo2=&txtSeatNo3=&txtSeatNo4=&txtSeatNo5=&txtSeatNo6=&txtSeatNo7=&txtSeatNo8=&txtSeatNo9=&txtSrcarNo1_1=&txtSrcarNo1_2=&txtSrcarNo1_3=&txtSrcarNo1_4=&txtSrcarNo1_5=&txtSrcarNo1_6=&txtSrcarNo1_7=&txtSrcarNo1_8=&txtSrcarNo1_9=&txtSeatNo1_1=&txtSeatNo1_2=&txtSeatNo1_3=&txtSeatNo1_4=&txtSeatNo1_5=&txtSeatNo1_6=&txtSeatNo1_7=&txtSeatNo1_8=&txtSeatNo1_9=&txtDmdSeatAtt1=&txtDmdSeatAtt2=&txtDmdSeatAtt3=&txtDmdSeatAtt4=&txtDmdSeatAtt5=&txtDmdSeatAtt6=&txtDmdSeatAtt7=&txtDmdSeatAtt8=&txtDmdSeatAtt9=&txtDmdSeatAtt1_1=&txtDmdSeatAtt1_2=&txtDmdSeatAtt1_3=&txtDmdSeatAtt1_4=&txtDmdSeatAtt1_5=&txtDmdSeatAtt1_6=&txtDmdSeatAtt1_7=&txtDmdSeatAtt1_8=&txtDmdSeatAtt1_9=&hidRsvChgNo=&hidRsvTpCd=03&txtPsgTpCd1=1&txtPsgTpCd2=3&txtPsgTpCd3=1&txtPsgTpCd4=&txtPsgTpCd5=1&txtPsgTpCd6=&txtPsgTpCd7=1&txtPsgTpCd8=3&txtPsgTpCd9=&txtDiscKndCd1=000&txtDiscKndCd2=000&txtDiscKndCd3=111&txtDiscKndCd4=&txtDiscKndCd5=131&txtDiscKndCd6=&txtDiscKndCd7=112&txtDiscKndCd8=321&txtDiscKndCd9=&txtCompaCnt1=0&txtCompaCnt2=0&txtCompaCnt3=0&txtCompaCnt4=0&txtCompaCnt5=0&txtCompaCnt6=0&txtCompaCnt7=0&txtCompaCnt8=0&txtCompaCnt9=&txtStndFlg=&txtJobId=&txtJrnyCnt=&txtDptStnConsOrdr1=&txtArvStnConsOrdr1=&txtDptStnRunOrdr1=&txtArvStnRunOrdr1=&txtDptStnConsOrdr2=&txtArvStnConsOrdr2=&txtDptStnRunOrdr2=&txtArvStnRunOrdr2=&txtPsrmClCd1=&txtJrnySqno1=&txtJrnyTpCd1=&txtDptDt1=&txtDptRsStnCd1=&txtDptRsStnCdNm1=&txtDptTm1=&txtArvRsStnCd1=&txtArvRsStnCdNm1=&txtArvTm1=&txtTrnNo1=&txtRunDt1=&txtTrnClsfCd1=&txtTrnGpCd1=&txtChgFlg1=&txtDoTrnFlg1=&txtPsrmClCd2=&txtJrnySqno2=&txtJrnyTpCd2=&txtDptDt2=&txtDptRsStnCd2=&txtDptRsStnCdNm2=&txtDptTm2=&txtArvRsStnCd2=&txtArvRsStnCdNm2=&txtArvTm2=&txtTrnNo2=&txtRunDt2=&txtTrnClsfCd2=&txtTrnGpCd2=&txtChgFlg2=&txtDoTrnFlg2=&selGoStartDay=&strHmac=&PageInx=&hidEasyTalk=&hidCapFlag=\n"
+const val SEOUL_TO_SUNCHEN_URL =
+    "hidNormalRsv=&hidBiztransferRsv=&srTOrder=&hidDiscount=&selGoTrain=05&txtPsgFlg_1=2&txtPsgFlg_2=0&txtPsgFlg_8=0&txtPsgFlg_3=0&txtPsgFlg_4=0&txtPsgFlg_5=0&txtSeatAttCd_3=000&txtSeatAttCd_2=000&txtSeatAttCd_4=015&selGoTrainRa=05&radJobId=1&txtGoStart=%EC%84%9C%EC%9A%B8&txtGoEnd=%EC%88%9C%EC%B2%9C&txtGoStartCode=&txtGoEndCode=&selGoYear=2023&selGoMonth=10&selGoDay=21&selGoHour=00&txtGoHour=000000&txtGoYoil=%ED%86%A0&ret_url=&selGoSeat1=015&selGoSeat2=&txtPsgCnt1=2&txtPsgCnt2=0&txtGoPage=1&txtGoAbrdDt=20231021&selGoRoom=&useSeatFlg=&useServiceFlg=&checkStnNm=Y&SeandYo=N&txtGoStartCode2=&txtGoEndCode2=&txtPnrNo=&hidStlFlg=&chkTrnSeq=&chkChgTrn1=&chkChgTrn2=&chkBtnImgTrn1=&chkBtnImgTrn2=&chkInitFlg=Y&txtMenuId=11&ra=1&txtSeatAttCd1=&txtSeatAttCd2=&txtSeatAttCd3=&txtSeatAttCd4=&txtSeatAttCd4_1=&txtSeatAttCd5=&strChkCpn=N&txtTotPsgCnt=&txtSrcarCnt=0&txtSrcarCnt1=0&txtSrcarNo1=&txtSrcarNo2=&txtSrcarNo3=&txtSrcarNo4=&txtSrcarNo5=&txtSrcarNo6=&txtSrcarNo7=&txtSrcarNo8=&txtSrcarNo9=&txtSeatNo1=&txtSeatNo2=&txtSeatNo3=&txtSeatNo4=&txtSeatNo5=&txtSeatNo6=&txtSeatNo7=&txtSeatNo8=&txtSeatNo9=&txtSrcarNo1_1=&txtSrcarNo1_2=&txtSrcarNo1_3=&txtSrcarNo1_4=&txtSrcarNo1_5=&txtSrcarNo1_6=&txtSrcarNo1_7=&txtSrcarNo1_8=&txtSrcarNo1_9=&txtSeatNo1_1=&txtSeatNo1_2=&txtSeatNo1_3=&txtSeatNo1_4=&txtSeatNo1_5=&txtSeatNo1_6=&txtSeatNo1_7=&txtSeatNo1_8=&txtSeatNo1_9=&txtDmdSeatAtt1=&txtDmdSeatAtt2=&txtDmdSeatAtt3=&txtDmdSeatAtt4=&txtDmdSeatAtt5=&txtDmdSeatAtt6=&txtDmdSeatAtt7=&txtDmdSeatAtt8=&txtDmdSeatAtt9=&txtDmdSeatAtt1_1=&txtDmdSeatAtt1_2=&txtDmdSeatAtt1_3=&txtDmdSeatAtt1_4=&txtDmdSeatAtt1_5=&txtDmdSeatAtt1_6=&txtDmdSeatAtt1_7=&txtDmdSeatAtt1_8=&txtDmdSeatAtt1_9=&hidRsvChgNo=&hidRsvTpCd=03&txtPsgTpCd1=1&txtPsgTpCd2=3&txtPsgTpCd3=1&txtPsgTpCd4=&txtPsgTpCd5=1&txtPsgTpCd6=&txtPsgTpCd7=1&txtPsgTpCd8=3&txtPsgTpCd9=&txtDiscKndCd1=000&txtDiscKndCd2=000&txtDiscKndCd3=111&txtDiscKndCd4=&txtDiscKndCd5=131&txtDiscKndCd6=&txtDiscKndCd7=112&txtDiscKndCd8=321&txtDiscKndCd9=&txtCompaCnt1=0&txtCompaCnt2=0&txtCompaCnt3=0&txtCompaCnt4=0&txtCompaCnt5=0&txtCompaCnt6=0&txtCompaCnt7=0&txtCompaCnt8=0&txtCompaCnt9=&txtStndFlg=&txtJobId=&txtJrnyCnt=&txtDptStnConsOrdr1=&txtArvStnConsOrdr1=&txtDptStnRunOrdr1=&txtArvStnRunOrdr1=&txtDptStnConsOrdr2=&txtArvStnConsOrdr2=&txtDptStnRunOrdr2=&txtArvStnRunOrdr2=&txtPsrmClCd1=&txtJrnySqno1=&txtJrnyTpCd1=&txtDptDt1=&txtDptRsStnCd1=&txtDptRsStnCdNm1=&txtDptTm1=&txtArvRsStnCd1=&txtArvRsStnCdNm1=&txtArvTm1=&txtTrnNo1=&txtRunDt1=&txtTrnClsfCd1=&txtTrnGpCd1=&txtChgFlg1=&txtDoTrnFlg1=&txtPsrmClCd2=&txtJrnySqno2=&txtJrnyTpCd2=&txtDptDt2=&txtDptRsStnCd2=&txtDptRsStnCdNm2=&txtDptTm2=&txtArvRsStnCd2=&txtArvRsStnCdNm2=&txtArvTm2=&txtTrnNo2=&txtRunDt2=&txtTrnClsfCd2=&txtTrnGpCd2=&txtChgFlg2=&txtDoTrnFlg2=&selGoStartDay=&strHmac=&PageInx=&hidEasyTalk=&hidCapFlag=\n"
 enum class KTXTicket(
     val targetName: String,
     val startTime: Int,
@@ -26,104 +30,29 @@ enum class KTXTicket(
     val url: String,
     val isOnlyKtx: Boolean
 ) {
-    CHUNG_RYANG_RI_TO_ANDONG("청량리에서 안동", 900, 1800, CHUNG_RYANG_RI_TO_ANDONG_URL, false),
+    YONGSAN_TO_SUNCHEN("용산에서 순천", 700, 1000, YONGSAN_TO_SUNCHEN_URL, false),
+    SEOUL_TO_SUNCHEN("서울에서 순천", 700, 1000, SEOUL_TO_SUNCHEN_URL, false),
 }
 
 val telegramBot = TelegramBot(TELEGRAM_BOT_TOKEN)
 fun main() {
+    val ktxAlarm = KTXAlarm()
     val ktxHttpRequest = OldHttpRequest()
-    val startRequest = SendMessage(ADMIN_CHAT_ID, "서버 시작 v8")
-    val objectMapper = jsonMapper()
-        .registerModules(kotlinModule())
+    val startRequest = SendMessage(ADMIN_CHAT_ID, "서버 시작 v9")
+
     telegramBot.execute(startRequest)
     var count = 0
     while (true) {
-//        sendKtxAlarm(KTXTicket.CHUNG_RYANG_RI_TO_ANDONG, ktxHttpRequest)
-        sendSwimAlarm(objectMapper)
+        ktxAlarm.sendKtxAlarm(KTXTicket.YONGSAN_TO_SUNCHEN, ktxHttpRequest)
+        ktxAlarm.sendKtxAlarm(KTXTicket.SEOUL_TO_SUNCHEN, ktxHttpRequest)
 
         count++
-        val loop = 3600*12
+        val loop = 3600
         if (count > loop) {
             val serverHealthRequest = SendMessage(ADMIN_CHAT_ID, "서버 정상")
             telegramBot.execute(serverHealthRequest)
             count = 0
         }
     }
-}
-
-fun sendSwimAlarm(objectMapper: ObjectMapper) {
-    val response = SinlimSwimHttpRequest().sendRequest(SINLIM_ATHLETIC_CENTER_LECTURE_URL, objectMapper)
-    val remainLectureList = response
-        .filter { it.capa.toInt() - it.reg_person.toInt() > 0 }
-        .filter { (it.class_cd == "00038" || it.class_cd == "00046") }
-
-    remainLectureList.forEach {
-        val request = SendMessage(MEGABOX_CLIENT_CHAT_ID, "${it.comnm} ${it.train_day_nm}  ${it.train_stime}")
-        telegramBot.execute(request)
-    }
-}
-
-fun sendKtxAlarm(ticket: KTXTicket, ktxHttpRequest: CustomHttpRequest) {
-    val html = ktxHttpRequest.sendRequest(KTX_URL, ticket.url)
-    val remainTrainInfoList = getRemainTrainInfoList(html, ticket)
-
-    remainTrainInfoList.forEach {
-        val request = SendMessage(MEGABOX_CLIENT_CHAT_ID, "${ticket.targetName} ${it.startTime}")
-        telegramBot.execute(request)
-    }
-}
-
-fun getRemainTrainInfoList(html: String, ktxTicket: KTXTicket): List<TrainInfo> {
-
-    val document = Jsoup.parse(html)
-    // tr의 index
-    // 구분	열차  번호 출발시각 도착시각 정렬	특실/우등실 일반실 유아 자유석/입석	인터넷특가 예약 정차역 차량유형 운임 소요시간
-    val table = document.select("#tableResult > tbody > tr")
-    return table.map {
-        TrainInfo(
-            parseTimeNumber(it, telegramBot),
-            isKtx(it.child(1)),
-            isSoldOut(it.child(4)),
-            isSoldOut(it.child(5))
-        )
-    }.filter {
-        it.startTime in ktxTicket.startTime..ktxTicket.endTime && !it.isNormalSoldOut
-                && (!ktxTicket.isOnlyKtx || it.isKtx)
-    }
-}
-
-class TrainInfo(
-    val startTime: Int,
-    val isKtx: Boolean,
-    val isSpecialSoldOut: Boolean,
-    val isNormalSoldOut: Boolean
-)
-
-fun parseTimeNumber(element: Element, telegramBot: TelegramBot): Int {
-    runCatching {
-        val stringToTimeRegex = "[0-9][0-9]:[0-9][0-9]".toRegex()
-        val startTimeString = element.child(2).toString()
-
-        val timeString = stringToTimeRegex.find(startTimeString)!!.value
-
-        val timeToNumberRegex = "[0-9]".toRegex()
-        return timeToNumberRegex.findAll(timeString).joinToString("") { str -> str.value }.toInt()
-    }.onFailure {
-        sendError(telegramBot, "날짜 파싱 에러")
-    }
-    return 0
-}
-
-fun sendError(telegramBot: TelegramBot, errMsg: String) {
-    val request = SendMessage(ADMIN_CHAT_ID, errMsg)
-    telegramBot.execute(request)
-}
-
-fun isKtx(element: Element): Boolean {
-    return element.toString().contains("KTX")
-}
-
-fun isSoldOut(element: Element): Boolean {
-    return element.toString().contains("매진")
 }
 
