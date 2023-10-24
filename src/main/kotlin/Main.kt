@@ -47,7 +47,6 @@ fun main() {
             telegramBot.execute(serverHealthRequest)
             count = 0
         }
-        Thread.sleep(1000)
     }
 }
 
