@@ -32,7 +32,7 @@ enum class KTXTicket(
 val telegramBot = TelegramBot(TELEGRAM_BOT_TOKEN)
 fun main() {
 
-    val startRequest = SendMessage(ADMIN_CHAT_ID, "서버 시작 v8")
+    val startRequest = SendMessage(ADMIN_CHAT_ID, "서버 시작 v9.1")
     val objectMapper = jsonMapper()
         .registerModules(kotlinModule())
     telegramBot.execute(startRequest)
