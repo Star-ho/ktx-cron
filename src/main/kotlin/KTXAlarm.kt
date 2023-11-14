@@ -9,10 +9,8 @@ class KTXAlarm {
         val remainTrainInfoList = getRemainTrainInfoList(html, ticket)
 
         remainTrainInfoList.forEach {
-//        val request = SendMessage(MEGABOX_CLIENT_CHAT_ID, "${ticket.targetName} ${it.startTime}")
-//        telegramBot.execute(request)
-//        telegramBot.execute(request)
-//        telegramBot.execute(request)
+            val request = SendMessage(MEGABOX_CLIENT_CHAT_ID, "${ticket.targetName} ${it.startTime}")
+            telegramBot.execute(request)
         }
     }
 
@@ -31,8 +29,8 @@ class KTXAlarm {
             )
         }.filter {
             it.startTime in ktxTicket.startTime..ktxTicket.endTime
-//                && !it.isNormalSoldOut
-//                && (!ktxTicket.isOnlyKtx || it.isKtx)
+                && !it.isNormalSoldOut
+                && (!ktxTicket.isOnlyKtx || it.isKtx)
         }
     }
 
