@@ -21,15 +21,6 @@ class KTXAlarm {
         // 구분	열차  번호 출발시각 도착시각 정렬	특실/우등실 일반실 유아 자유석/입석	인터넷특가 예약 정차역 차량유형 운임 소요시간
         val table = document.select("#tableResult > tbody > tr")
         val res = table.map {
-            println(it)
-            println(
-                TrainInfo(
-                    parseTimeNumber(it, telegramBot),
-                    isKtx(it.child(1)),
-                    isAvailableReservation(it.child(4)),
-                    isAvailableReservation(it.child(5))
-                )
-            )
             TrainInfo(
                 parseTimeNumber(it, telegramBot),
                 isKtx(it.child(1)),
