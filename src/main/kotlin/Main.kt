@@ -43,6 +43,8 @@ enum class KTXTicket(
 
 val telegramBot = TelegramBot(TELEGRAM_BOT_TOKEN)
 fun main() {
+
+
     val ktxAlarm = KTXAlarm()
     val ktxHttpRequest = OldHttpRequest()
     val startRequest = SendMessage(ADMIN_CHAT_ID, "서버 시작 v10.2")
@@ -50,9 +52,9 @@ fun main() {
     telegramBot.execute(startRequest)
     var count = 0
     while (true) {
-        ktxAlarm.sendKtxAlarm(KTXTicket.DONGDEAGU_TO_SEOUL_FIRST, ktxHttpRequest)
-        ktxAlarm.sendKtxAlarm(KTXTicket.DONGDEAGU_TO_SEOUL_SECOND, ktxHttpRequest)
-        ktxAlarm.sendKtxAlarm(KTXTicket.DONGDEAGU_TO_SEOUL_THIRD, ktxHttpRequest)
+        Thread.startVirtualThread { ktxAlarm.sendKtxAlarm(KTXTicket.DONGDEAGU_TO_SEOUL_FIRST, ktxHttpRequest) }
+        Thread.startVirtualThread { ktxAlarm.sendKtxAlarm(KTXTicket.DONGDEAGU_TO_SEOUL_SECOND, ktxHttpRequest) }
+        Thread.startVirtualThread { ktxAlarm.sendKtxAlarm(KTXTicket.DONGDEAGU_TO_SEOUL_THIRD, ktxHttpRequest) }
 
         count++
         val loop = 3600

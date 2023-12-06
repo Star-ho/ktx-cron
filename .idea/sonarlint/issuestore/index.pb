@@ -22,9 +22,9 @@ Q
 !src/main/kotlin/OldHttpRequest.kt,b/3/b36aabd2e90924e95d5e1b08dbc897924c1c63fa
 K
 src/main/kotlin/requests.kt,9/9/9911509148ad6fa58b7bf43bbeb4a1c16def7ffc
-X
-(src/main/kotlin/SinlimSwimHttpRequest.kt,4/9/492b6654742ff60235b6e4119b29bdfd4ecf24c2
-M
-src/main/kotlin/SwimgAlarm.kt,a/d/adaa3ccf7340fb97a73dea1c704499f69d57ddbc
 K
 src/main/kotlin/KTXAlarm.kt,6/1/6135c311a75fd347757c48b7d7649bc859b96119
+S
+#.idea/sonarlint/issuestore/index.pb,9/f/9fe84ebb15faf917b7def6236dba604453cc61e0
+]
+-.idea/sonarlint/securityhotspotstore/index.pb,8/8/88a9255124c95bdc913197c120a8d560edc59c8e
