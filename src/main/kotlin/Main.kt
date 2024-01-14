@@ -55,7 +55,7 @@ fun main() {
 
     telegramBot.execute(startRequest)
     var count = 0
-    while (count<1) {
+    while (true) {
 
         val threadList = KTXTicket.entries.map {
             Thread.startVirtualThread { ktxAlarm.sendKtxAlarm(it, ktxHttpRequest) }
