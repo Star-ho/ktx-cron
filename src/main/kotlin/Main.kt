@@ -51,7 +51,7 @@ fun main() {
 
     val ktxAlarm = KTXAlarm()
     val ktxHttpRequest = OldHttpRequest()
-    val startRequest = SendMessage(ADMIN_CHAT_ID, "서버 시작 v10.21")
+    val startRequest = SendMessage(ADMIN_CHAT_ID, "서버 시작 v10.22")
 
     telegramBot.execute(startRequest)
     var count = 0
