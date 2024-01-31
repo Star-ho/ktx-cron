@@ -10,7 +10,7 @@ class KTXAlarm {
 
         remainTrainInfoList.forEach {
             val request = SendMessage(KTX_CLIENT_CHAT_ID, "${ticket.targetName} ${it.startTime}")
-            telegramBot.execute(request)
+//            telegramBot.execute(request)
         }
     }
 
@@ -29,9 +29,10 @@ class KTXAlarm {
             )
         }.filter {
             it.startTime in ktxTicket.startTime..ktxTicket.endTime
-                && !it.isNormalSoldOut
-                && (!ktxTicket.isOnlyKtx || it.isKtx)
+//                && !it.isNormalSoldOut
+                && (!ktxTicket.isOnlyKtxOrSRT || it.isKtx)
         }
+        println("${ktxTicket.targetName} ${res.size}")
 
         return res
     }
@@ -64,7 +65,7 @@ class KTXAlarm {
     }
 
     fun isKtx(element: Element): Boolean {
-        return element.toString().contains("KTX")
+        return element.toString().contains("KTX").or(element.toString().contains("SRT"))
     }
 
     fun isAvailableReservation(element: Element): Boolean {
