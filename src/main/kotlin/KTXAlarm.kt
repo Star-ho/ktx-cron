@@ -10,7 +10,7 @@ class KTXAlarm {
 
         remainTrainInfoList.forEach {
             val request = SendMessage(KTX_CLIENT_CHAT_ID, "${ticket.targetName} ${it.startTime}")
-            telegramBot.execute(request)
+//            telegramBot.execute(request)
         }
     }
 
@@ -68,6 +68,6 @@ class KTXAlarm {
     }
 
     fun isAvailableReservation(element: Element): Boolean {
-        return element.toString().contains("예약하기") || element.toString().contains("좌석선택")
+        return element.toString().contains("예약하기") || element.toString().contains("좌석선택") || element.toString().contains("예약링크")
     }
 }
