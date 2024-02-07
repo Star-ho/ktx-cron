@@ -10,7 +10,7 @@ class KTXAlarm {
 
         remainTrainInfoList.forEach {
             val request = SendMessage(KTX_CLIENT_CHAT_ID, "${ticket.targetName} ${it.startTime}")
-//            telegramBot.execute(request)
+            telegramBot.execute(request)
         }
     }
 
