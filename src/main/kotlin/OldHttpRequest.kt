@@ -14,6 +14,8 @@ class OldHttpRequest:CustomHttpRequest{
             .setHeader("Content-Type","application/x-www-form-urlencoded")
             .build()
 
-        return client.send(request, HttpResponse.BodyHandlers.ofString()).body()
+        val res = client.send(request, HttpResponse.BodyHandlers.ofString()).body()
+        client.close()
+        return res
     }
 }
