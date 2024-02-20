@@ -4,7 +4,7 @@ import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
 
 class KTXAlarm {
-    fun sendKtxAlarm(ticket: KTXTicket, ktxHttpRequest: CustomHttpRequest) {
+    fun sendKtxAlarm(ticket: KTXTicket, ktxHttpRequest: CustomHttpRequest): String {
         val html = ktxHttpRequest.sendRequest(KTX_URL, ticket.url)
         val remainTrainInfoList = getRemainTrainInfoList(html, ticket)
 
@@ -12,6 +12,7 @@ class KTXAlarm {
             val request = SendMessage(KTX_CLIENT_CHAT_ID, "${ticket.targetName} ${it.startTime}")
             telegramBot.execute(request)
         }
+        return "11"
     }
 
     fun getRemainTrainInfoList(html: String, ktxTicket: KTXTicket): List<TrainInfo> {
