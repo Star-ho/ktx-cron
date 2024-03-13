@@ -9,7 +9,7 @@ class KTXAlarm {
         val remainTrainInfoList = getRemainTrainInfoList(html, ticket)
 
         remainTrainInfoList.forEach {
-            val request = SendMessage(KTX_CLIENT_CHAT_ID, "${ticket.targetName} ${it.startTime}")
+            val request = SendMessage(MEGABOX_CLIENT_CHAT_ID, "${ticket.targetName} ${it.startTime}")
             telegramBot.execute(request)
         }
         return "11"
